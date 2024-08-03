@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="new">
+    <div class="center">
+        <h2>New User</h2>
+        <form action="/user/new" method="post">
+            <div class="grp">
+                <input type="text" name="username" id="user" required />
+                <label for="user">username</label>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="grp">
+                <input type="email" name="email" id="mail" required />
+                <label for="mail">email</label>
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="grp">
+                <input type="password" name="password" id="key" pattern="^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$" required />
+                <label for="key">password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="lst">
+                <ul>note:password must contain
+                    <li>an alphabet</li>
+                    <li>a special character</li>
+                    <li>not less than 8 letters</li>
+                </ul>
+            </div>
+
+
+            <button id="btn">Submit</button></form>
+    </div>
+</body>
+
+</html>

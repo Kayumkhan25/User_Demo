@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/css/style2.css" />
+
+</head>
+
+<body>
+    <table>
+        <form method="get" action="/user/new">
+            <button class="btn-new">New User </button>
+        </form>
+
+        <tr>
+            <th colspan="5" id="head">
+                <h2 id>User Data</h2>
+            </th>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>User</th>
+            <th>email</th>
+            <th>Edit </th>
+            <th>Delete</th>
+        </tr>
+        <% for (user of users) { %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.username %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <form action="/user/<%=user.id%>/edit" method="GET">
+                        <button class="btn-edit">Edit</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/user/<%=user.id%>/delete">
+                        <button class="btn-delete">Delete</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>

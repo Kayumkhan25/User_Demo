@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <link rel="stylesheet" href="/css/style4.css" />
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="new">
+    <div class="center">
+        <h3>Delete User: @
+            <%=user.username%>
+        </h3>
+        <form action="/user/<%=user.id%>?_method=DELETE" method="post">
+            <div class="grp">
+                <input name="password" type="password" placeholder="Please enter password" required/>
+
+            </div>
+            <button id="btn">Delete</button>
+        </form>
+    </div>
+</body>
+
+</html>

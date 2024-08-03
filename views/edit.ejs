@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="new">
+    <div class="center">
+        <h2>You are about to edit:</h2>
+        <h3>
+            <%= user.username %>
+        </h3>
+
+        <form action="/user/<%= user.id %>?_method=PATCH" method="post">
+            <div class="grp">
+                <input name="username" id="user" required/>
+                <label for="user">username</label>
+                <i class="fa-regular fa-user "></i>
+            </div>
+            <div class="grp">
+                <input type="password" name="password" id="password" required />
+                <label for="password">password</label>
+                <i class="fa-solid fa-lock "></i>
+            </div>
+
+            <button id="btn-edit">Edit</button>
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>

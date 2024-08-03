@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "development"
+  ],
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 126",
+    "not firefox <= 127",
+    "not ios_saf <= 17.5",
+    "not safari <= 17.5"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-backdrop-filter"
+        ]
+      }
+    ],
+    "css-prefix-order": "off"
+  }
+}

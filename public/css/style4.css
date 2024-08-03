@@ -1,0 +1,89 @@
+body {
+    background-image: url(../images/door.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.center {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    text-align: center;
+    background: rgba(52, 51, 52, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #e8dfdf;
+}
+
+.grp {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.grp input {
+    width: calc(100% - 20px);
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #d6cece;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grp input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input::placeholder {
+    color: rgb(240, 237, 245);
+    opacity: 1;
+}
+
+.grp label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    color: #888;
+    transition: opacity 0.3s, top 0.3s, font-size 0.3s;
+    pointer-events: none;
+}
+
+.grp input:focus~label,
+.grp input:not(:placeholder-shown)~label {
+    opacity: 0;
+    top: -15px;
+    font-size: 0.8em;
+    color: #007bff;
+}
+
+#btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #dc3545;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background-color: #dd0c0c;
+    box-shadow: 3px 3px 5px rgba(174, 36, 36, 0.3);
+}
